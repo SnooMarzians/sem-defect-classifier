@@ -1,12 +1,13 @@
+# src/model.py
+
 import torch.nn as nn
-from torchvision.models import efficientnet_b0, EfficientNet_B0_Weights
+from torchvision import models
 from src.config import NUM_CLASSES
 
-
 def get_model():
-    weights = EfficientNet_B0_Weights.DEFAULT
-    model = efficientnet_b0(weights=weights)
+    model = models.efficientnet_b0(pretrained=True)
 
+    # Replace classifier head
     model.classifier[1] = nn.Linear(
         model.classifier[1].in_features,
         NUM_CLASSES

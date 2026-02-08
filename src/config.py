@@ -1,6 +1,6 @@
-# ===== Model & Training Configuration =====
+# src/config.py
 
-NUM_CLASSES = 8
+MODEL_PATH = "saved_models/efficientnet_b0.pth"
 
 CLASS_NAMES = [
     "clean",
@@ -13,11 +13,6 @@ CLASS_NAMES = [
     "other"
 ]
 
-IMG_SIZE = 224
-BATCH_SIZE = 32
-EPOCHS = 40
-LEARNING_RATE = 1e-4
+NUM_CLASSES = len(CLASS_NAMES)
 
-# ===== Paths =====
-MODEL_PATH = "saved_models/efficientnet_b0.pth"
-ONNX_PATH = "saved_models/efficientnet_b0.onnx"
+IMAGE_SIZE = 224
