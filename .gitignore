@@ -1,0 +1,20 @@
+# Virtual environment
+venv/
+
+# Dataset (do not upload images)
+data/
+
+# Model files
+*.pth
+*.onnx
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
