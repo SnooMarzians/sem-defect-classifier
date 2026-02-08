@@ -99,11 +99,3 @@ This project is developed for academic and hackathon purposes.
 
 ---
 
-## 🔹 5.5 Commit & push code
-
-Run **line by line**:
-
-```powershell
-git add .
-git commit -m "Initial commit: EfficientNet-B0 SEM defect classifier"
-git push -u origin main
