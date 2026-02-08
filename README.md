@@ -46,7 +46,16 @@ data/
 └── other
 
 
-> **Note:** Dataset images are not included in this repository as per submission guidelines.
+## Dataset and Model
+
+Due to large file size constraints, the dataset and trained ONNX model are hosted on Google Drive, in the same folder attached below.
+
+- 📁 **Dataset (Train / Validation / Test images) 🧠 Trained ONNX Model (EfficientNet-B0)** 
+  https://drive.google.com/file/d/1NJlA6dN__Vagi_tIThfP5y0t3T5zvsEn/view?usp=sharing
+
+The dataset follows the required folder structure with class-wise subfolders for:
+clean, bridges, gaps, cracks, foreign_materials, cmp, ler, and other.
+
 
 ---
 
