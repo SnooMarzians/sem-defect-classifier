@@ -1,24 +1,33 @@
 # src/config.py
 
-from pathlib import Path
+# ===== DATA =====
+TRAIN_DIR = "data/train"
+VAL_DIR   = "data/val"
+TEST_DIR  = "data/test"
 
-# Project root
-BASE_DIR = Path(__file__).resolve().parent.parent
+# ===== IMAGE =====
+IMG_SIZE = 224
+IMAGE_SIZE = 224   # for infer.py compatibility
 
-# Model
-MODEL_PATH = BASE_DIR / "saved_models" / "efficientnet_b0.pth"
+# ===== TRAINING =====
+BATCH_SIZE = 16
+EPOCHS = 20
+LEARNING_RATE = 1e-4
 
-# Classes (ORDER MUST MATCH TRAINING)
+# ===== CLASSES =====
 CLASS_NAMES = [
-    "clean",
     "bridges",
-    "gaps",
+    "clean",
+    "cmp",
     "cracks",
     "foreign_materials",
-    "cmp",
+    "gaps",
     "ler",
     "other"
 ]
 
-# Image settings
-IMAGE_SIZE = 224
+NUM_CLASSES = len(CLASS_NAMES)
+
+# ===== MODEL =====
+MODEL_PATH = "saved_models/efficientnet_b0.pth"
+ONNX_PATH  = "saved_models/efficientnet_b0.onnx"
